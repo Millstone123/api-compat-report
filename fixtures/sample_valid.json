@@ -1,0 +1,4 @@
+{
+  "fixture": "user-profile",
+  "data": {"id": 7, "name": "Ada", "email": "ada@example.test", "status": "active"}
+}
