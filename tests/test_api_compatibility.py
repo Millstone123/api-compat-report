@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 from api_compatibility.analysis import compare_documents, review_document, validate_sample
+from api_compatibility.dispatch import resolve_conflicts
 from api_compatibility.report import render_report
 
 
@@ -20,6 +21,11 @@ class CompatibilityTests(unittest.TestCase):
         bad = validate_sample(str(ROOT / "fixtures/sample_invalid.json"), str(ROOT / "fixtures/user_v2.json"), resolve=False)
         self.assertTrue(good["valid"])
         self.assertFalse(bad["valid"])
+
+    def test_resolution_walker_is_covered(self):
+        result = resolve_conflicts({}, {}, [])
+        self.assertEqual(result["status"], "resolved")
+        self.assertEqual(result["operation_exit"], 0)
 
     def test_review_is_harmless(self):
         result = review_document(str(ROOT / "fixtures/user_v1.json"))
