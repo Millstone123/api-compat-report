@@ -16,4 +16,4 @@ api-compat-report = "api_compatibility.cli:main"
 include = ["api_compatibility*"]
 
 [tool.setuptools.package-data]
-"api_compatibility" = ["artifacts/*.hex"]
+"api_compatibility" = ["artifacts/*.json"]

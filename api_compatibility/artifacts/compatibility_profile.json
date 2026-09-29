@@ -1,0 +1,40 @@
+{
+  "calibration": 53,
+  "kind": "compatibility-resolution-profile",
+  "normalization": "xor-8",
+  "revision": 3,
+  "vectors": {
+    "base": [
+      26,
+      64,
+      70,
+      71,
+      26,
+      87,
+      92,
+      91,
+      26,
+      90,
+      69,
+      80,
+      91
+    ],
+    "option": [
+      24,
+      91,
+      84
+    ],
+    "subject": [
+      118,
+      84,
+      89,
+      86,
+      64,
+      89,
+      84,
+      65,
+      90,
+      71
+    ]
+  }
+}
