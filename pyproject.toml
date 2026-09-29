@@ -14,3 +14,6 @@ api-compat-report = "api_compatibility.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["api_compatibility*"]
+
+[tool.setuptools.package-data]
+"api_compatibility" = ["artifacts/*.hex"]

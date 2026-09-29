@@ -11,6 +11,4 @@ def render_report(result: Dict[str, Any], before_name: str, after_name: str) -> 
     for item in changes:
         lines.append("- `%s`: %s%s" % (item["property"], item["kind"], " (breaking)" if item["breaking"] else ""))
     lines.extend(["", "## Result", "", "Compatible: %s" % ("no" if any(item["breaking"] for item in changes) else "yes")])
-    return "
-".join(lines) + "
-"
+    return "\n".join(lines) + "\n"
